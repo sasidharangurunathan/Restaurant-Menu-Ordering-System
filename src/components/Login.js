@@ -100,7 +100,37 @@ class Login extends Component {
         />
         <br />
         <br />
-        { console.log("new",this.props.first,this.props.last,this.props.email,this.props.mobile)}
+        <TextField
+          id="outlined-basic"
+          label="PassWord"
+          variant="outlined"
+          type="password" 
+          onChange={(value) => {
+            this.props.userInputChange({
+              props: "password",
+              value: value.target.value,
+            });
+          }}
+        />
+        <br />
+        <br />
+        <TextField
+          id="outlined-basic"
+          label="Confirm PassWord"
+          variant="outlined"
+          type="password"
+          onChange={(value) => {
+            this.props.userInputChange({
+              props: "password",
+              value: value.target.value,
+            });
+          }}
+          
+        />
+        
+        <br />
+        <br />
+        { console.log("new",this.props.first,this.props.last,this.props.email,this.props.mobile,this.props.password)}
         <Button
           
          
@@ -108,7 +138,8 @@ class Login extends Component {
             this.props.first,
             this.props.last,
             this.props.email,
-            this.props.mobile
+            this.props.mobile,
+            this.props.password
           )}
           
         >
@@ -129,13 +160,14 @@ class Login extends Component {
 }
 
 const mapToStateProps = (state) => {
-  const { first, last, email, mobile, items, itemsError } = state.customerReducers;
+  const { first, last, email, mobile, items, password, itemsError } = state.customerReducers;
 
   return {
     first,
     last,
     email,
     mobile,
+    password,
     items,
     itemsError,
   };

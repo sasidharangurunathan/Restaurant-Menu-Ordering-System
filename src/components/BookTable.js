@@ -134,7 +134,7 @@ const BookTable = () => {
             className="btn btn-primary m-2"
             onClick={() => order(items, localStorage.getItem("login"),localStorage.getItem("table"))}
           >
-            Buy Now
+            Reserve Table
           </button>
             </Col>
 

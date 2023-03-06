@@ -87,7 +87,7 @@ Promise.all([
               <th scope="col">Orders</th>
               <th scope="col">Order Status</th>
               
-              <th scope="col">Action</th>
+              {/* <th scope="col">Action</th> */}
             </tr>
           </thead>
           <tbody>
@@ -132,9 +132,9 @@ Promise.all([
             )}
                   </td>
                   
-                    <td></td>
+                    <td>{item.order_status}</td>
                     <td>
-                    {item.order_status=='packed'?<Button  >Delivered</Button>: <button onClick={()=>this.food({data:item.order_id})}  className="btn btn-danger" > Order</button>}
+                    {/* {item.order_status=='packed'?<Button  >Delivered</Button>: <button onClick={()=>this.food({data:item.order_id})}  className="btn btn-danger" > Order</button>} */}
                     {/* <Button  >Order</Button> */}
                     {/* <button className="btn btn-success" onClick={()=>this.food({data:item.order_id})} >BookTable</button> */}
 

@@ -1,9 +1,14 @@
 import React from "react";
 import { useCart } from "react-use-cart";
-import Dose from "../../../src/image/dosa.jpg";
-import Parotta from "../../../src/image/parotta.png";
-import IdliVada from "../../../src/image/idli-vada.jpg";
-import Uttapam from "../../../src/image/uttapam.png";
+import Food1 from '../../image/3menu5.png'
+import Food2 from '../../image/3menu8.png'
+import Food3 from '../../image/3menu1.png'
+import Food4 from '../../image/3menu6.png'
+import Food5 from '../../image/3menu7.png'
+import Food6 from '../../image/3menu3.png';
+
+import Food7 from '../../image/4menu1.png';
+import Food8 from '../../image/4menu10.png';
 import BookTable from "../BookTable";
 import { Navbar, Nav, Form, Button, Container } from "react-bootstrap";
 
@@ -86,18 +91,34 @@ const Cart1 = () => {
                 return (
                   <tr key={index}>
                     <td>
-                      {item.img === "Dose" && (
+                      {/* {item.img === "Dose" && (
                         <img src={Dose} style={{ height: "6rem" }} />
-                      )}
-                      {item.img === "Parotta" && (
-                        <img src={Parotta} style={{ height: "6rem" }} />
-                      )}
-                      {item.img === "IdliVada" && (
-                        <img src={IdliVada} style={{ height: "6rem" }} />
-                      )}
-                      {item.img === "Uttapam" && (
-                        <img src={Uttapam} style={{ height: "6rem" }} />
-                      )}
+                      )} */}
+                      {item.img === "3menu5.png" && (
+          <img src={Food1} style={{ height: "6rem" }} />
+        )}
+        {item.img === "3menu8.png" && (
+          <img src={Food2} style={{ height: "6rem" }} />
+        )}
+        {item.img === "3menu1.png" && (
+          <img src={Food3} style={{ height: "6rem" }} />
+        )}
+        {item.img === "3menu6.png" && (
+          <img src={Food4} style={{ height: "6rem" }} />
+        )}
+        {item.img === "3menu7.png" && (
+          <img src={Food5} style={{ height: "6rem" }} />
+        )}
+        {item.img === "3menu3.png" && (
+          <img src={Food6} style={{ height: "6rem" }} />
+        )}
+
+        {item.img === "4menu1.png" && (
+          <img src={Food7} style={{ height: "6rem" }} />
+        )}
+        {item.img === "4menu10.png" && (
+          <img src={Food8} style={{ height: "6rem" }} />
+        )}
                     </td>
                     <td>{item.title}</td>
                     <td>{parseInt(item.price) * parseInt(item.quantity)}</td>
@@ -147,19 +168,20 @@ const Cart1 = () => {
           </button> */}
           
 
-      <button className="btn m-2" onClick={() => order(items)+ emptyCart()}><a className='btton'href="https://rzp.io/l/BKbtmnZom">Buy Foods</a></button>
+      <button className="btn m-2" onClick={() => order(items)}>Select Table</button>
+      <a className='btton'href="https://rzp.io/l/BKbtmnZom">Buy Foods</a>
         
 
 
 
           
-          <Router>
+          {/* <Router>
             <Switch>
               <Route exact path="/table" component={BookTable} />
             </Switch>
           </Router>
           <Nav.Link href="/table">BookTable</Nav.Link>
-          <Link  variant="black" to="/table">BookTable</Link>
+          <Link  variant="black" to="/table">BookTable</Link> */}
         </div>
       </div>
     </section>

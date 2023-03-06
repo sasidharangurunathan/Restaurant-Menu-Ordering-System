@@ -48,8 +48,8 @@ export class Navbar1 extends Component {
               
               <Nav className="me-auto">
                 <Nav.Link href="/home">Home</Nav.Link>
-                <Nav.Link href="/menu">Menu</Nav.Link>
-                <Nav.Link href="/product">Product</Nav.Link>
+                {/* <Nav.Link href="/menu">Menu</Nav.Link> */}
+                {/* <Nav.Link href="/product">Product</Nav.Link> */}
                 <Navbar.Toggle aria-controls="navbar-dark-example" />
         
             <NavDropdown
@@ -63,9 +63,7 @@ export class Navbar1 extends Component {
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Dinner</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
+              
             </NavDropdown>
           
                 {/* <Nav.Link href="/myorder">MyOrder</Nav.Link> */}

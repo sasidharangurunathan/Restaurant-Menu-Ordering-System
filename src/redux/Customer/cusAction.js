@@ -27,8 +27,8 @@ const fetchCustomerFailure = (error) => {
 };
 
 
-export const Register = (first, last, email, mobile) => {
-  console.log("payloadsaga", first, last, email, mobile);
+export const Register = (first, last, email, mobile, password) => {
+  console.log("payloadsaga", first, last, email, mobile, password);
   // let req = JSON.stringify({
   //   menu_name: payload.menu_name,
   //   menu_price: payload.menu_price,
@@ -39,6 +39,7 @@ export const Register = (first, last, email, mobile) => {
   formData.append("LastName", last);
   formData.append("Email", email);
   formData.append("Mobile", mobile);
+  formData.append("password", password);
   console.log((formData));
   const config = {
     headers: { "content-type": "multipart/form-data" },
@@ -50,6 +51,7 @@ export const Register = (first, last, email, mobile) => {
     axios
       .post("http://localhost:8081/register", formData, config)
       .then((res) => {
+        console.log("check",formData)
         console.log("saga12", res);
         //const customer = res.data;
         //dispatch(fetchCustomerSuccess(customer));
